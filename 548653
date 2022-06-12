@@ -1,0 +1,13 @@
+1. POST:http://localhost:3000/addCustomer ; Input: { "customerName":"Akash", "customerEmail":"akash@g.com", "customerMobileNo":"789898787", "customerCity":"delhi" }
+
+GET: http://localhost:3000/fetchCustomerDetails ; Output: [{"customerName":"Akash","customerMobileNo":"789898787","customerEmail":"akash@g.com","customerCity":"delhi","customerId":"1d1b9e20-e8fa-11ec-8156-638d19cbabb1"}]
+
+2. POST:http://localhost:3000/purchaseOrder ; Input:{"productName": "monitor","quantity": 1,"price": 5999,"MRP": 9999,"customerId": "1d1b9e20-e8fa-11ec-8156-638d19cbabb1"}
+
+GET: http://localhost:3000/fetchOrderDetails ; Output: [{"productName":"monitor","quantity":1,"price":5999,"MRP":9999,"customerId":"1d1b9e20-e8fa-11ec-8156-638d19cbabb1","OrderId":"38be4900-e8fc-11ec-8156-638d19cbabb1"}]
+
+3. POST: http://localhost:3000/shippingDetails ; Input: {"address": "#10,area69","city": "Delhi","pincode": "100001","orderId": "38be4900-e8fc-11ec-8156-638d19cbabb1","customerId": "1d1b9e20-e8fa-11ec-8156-638d19cbabb1"}
+
+GET: http://localhost:3000/fetchShippingDetails ; Output: {"address": "#10,area69","city": "Delhi","pincode": "100001","orderId": "38be4900-e8fc-11ec-8156-638d19cbabb1","customerId": "1d1b9e20-e8fa-11ec-8156-638d19cbabb1"}
+
+4. GET: http://localhost:3000/cityFilter ;  Input: {"city":"delhi"} ; Outpt: [{"address":"#10,area69","city":"delhi","pincode":"100001","orderId":"38be4900-e8fc-11ec-8156-638d19cbabb1","customerId":"1d1b9e20-e8fa-11ec-8156-638d19cbabb1"}]
